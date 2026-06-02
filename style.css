@@ -10,71 +10,74 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  padding: 40px 24px;
-  /* 심미성 추가: 은은한 파스텔 톤 배경 */
-  background: linear-gradient(135deg, #e6e9f0 0%, #eef1f5 100%);
-  color: #333;
+  padding: 60px 24px;
+  /* 차분하고 눈이 편안한 밝은 베이지 톤 배경 */
+  background: #fdfcf9;
+  color: #333333;
 }
 
 header {
   text-align: center;
-  margin-bottom: 40px;
-  background: rgba(255, 255, 255, 0.6);
-  padding: 20px 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  /* 제목 아래에 다크 그린 색상의 얇은 선으로 포인트 */
+  border-bottom: 2px solid #2e5c46; 
+  width: 100%;
+  max-width: 680px;
 }
 
 h1 {
-  font-size: 1.8rem;
-  color: #2c3e50;
-  margin-bottom: 8px;
+  font-size: 2rem;
+  color: #222222;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
 }
 
 p {
-  color: #7f8c8d;
-  font-size: 1rem;
+  color: #666666;
+  font-size: 1.05rem;
+  letter-spacing: 0.2px;
 }
 
-/* 그리드 설정: 2행 2열 */
 #projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
   max-width: 680px; 
-  gap: 30px;
+  gap: 40px; /* 카드 사이 여백을 조금 더 넓혀서 답답함 해소 */
 }
 
-/* 각 작품을 감싸는 카드 UI (심미성 강화) */
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #ffffff;
-  padding: 12px;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 16px;
+  /* 테두리를 각지게(border-radius: 4px) 하여 모던한 액자 느낌 연출 */
+  border-radius: 4px; 
+  border: 1px solid #eaeaea;
+  /* 은은하고 넓게 퍼지는 기본 그림자 */
+  box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
 }
 
-/* 마우스 올렸을 때 카드가 살짝 떠오르는 효과 */
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+  transform: translateY(-8px);
+  /* 마우스 오버 시 다크 그린 톤의 은은한 그림자 발생 */
+  box-shadow: 0 16px 32px rgba(46, 92, 70, 0.12);
+  border-color: #d1d8d4;
 }
 
-/* iframe을 감싸는 영역 */
 .cell {
-  aspect-ratio: 3 / 2; /* 600x400 비율 */
-  width: 300px;
+  aspect-ratio: 3 / 2; 
+  width: 100%; /* 카드 너비에 꽉 차게 변경 */
+  max-width: 300px;
   position: relative;
   overflow: hidden;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  background: #f8f9fa;
+  border-radius: 2px;
+  background: #f4f4f4;
 }
 
-/* iframe 크기 스케일링 설정 */
 .cell iframe {
   position: absolute;
   top: 0;
@@ -83,14 +86,14 @@ p {
   height: 400px;
   border: none;
   transform-origin: top left;
-  transform: scale(0.5); /* 600x400 캔버스를 300x200으로 축소 */
+  transform: scale(0.5); 
 }
 
-/* 하단 텍스트 라벨 */
 .label {
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin-top: 18px;
+  margin-bottom: 4px;
   font-size: 0.95rem;
-  font-weight: 600;
-  color: #34495e;
+  font-weight: 500;
+  color: #444444;
+  letter-spacing: 0.3px;
 }
