@@ -11,7 +11,6 @@ body {
   align-items: center;
   min-height: 100vh;
   padding: 60px 24px;
-  /* 차분하고 눈이 편안한 밝은 베이지 톤 배경 */
   background: #fdfcf9;
   color: #333333;
 }
@@ -20,7 +19,6 @@ header {
   text-align: center;
   margin-bottom: 50px;
   padding-bottom: 20px;
-  /* 제목 아래에 다크 그린 색상의 얇은 선으로 포인트 */
   border-bottom: 2px solid #2e5c46; 
   width: 100%;
   max-width: 680px;
@@ -44,7 +42,7 @@ p {
   grid-template-columns: 1fr 1fr;
   width: 100%;
   max-width: 680px; 
-  gap: 40px; /* 카드 사이 여백을 조금 더 넓혀서 답답함 해소 */
+  gap: 40px;
 }
 
 .card {
@@ -53,24 +51,21 @@ p {
   align-items: center;
   background: #ffffff;
   padding: 16px;
-  /* 테두리를 각지게(border-radius: 4px) 하여 모던한 액자 느낌 연출 */
   border-radius: 4px; 
   border: 1px solid #eaeaea;
-  /* 은은하고 넓게 퍼지는 기본 그림자 */
   box-shadow: 0 4px 24px rgba(0,0,0,0.04);
   transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  /* 마우스 오버 시 다크 그린 톤의 은은한 그림자 발생 */
   box-shadow: 0 16px 32px rgba(46, 92, 70, 0.12);
   border-color: #d1d8d4;
 }
 
 .cell {
   aspect-ratio: 3 / 2; 
-  width: 100%; /* 카드 너비에 꽉 차게 변경 */
+  width: 100%;
   max-width: 300px;
   position: relative;
   overflow: hidden;
